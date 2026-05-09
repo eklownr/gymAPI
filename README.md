@@ -30,6 +30,8 @@ pnpm test # run test (vitest)
 
 A screenshot of the passing GitHub Actions pipeline
 
+![github acctions](images/github-acctions.png)
+
 - ...
 
 ## Authentication
