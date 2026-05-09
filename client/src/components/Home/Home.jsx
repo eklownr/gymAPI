@@ -1,8 +1,10 @@
 const Home = () => {
 	return (
 		<div>
-			<h2>Home Module3 Auth0 with express</h2>
+			<h2>Home GymAPI - Module3 Auth0 with express</h2>
 			<a href="http://localhost:5173/profile"> Profile </a>
+			<a href="http://localhost:3000/gyms"> List all gyms </a>
+			<a href="http://localhost:3000/gyms/3"> Gym nr 3 </a>
 		</div>
 	);
 };

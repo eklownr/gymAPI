@@ -36,4 +36,12 @@ A screenshot of the passing GitHub Actions pipeline
 
 ## Authentication
 
-- I using Auth0. But I think FireBase is easyer to setup.
+- I using Auth0. But I think FireBase can be easyer to setup.
+
+* Set up Auth0 Application
+* Create an account at Auth0, register your app, and obtain credentials: Domain, Client ID, and Client Secret.
+* Configure Settings
+* Set allowed URLs in Auth0 Dashboard:
+* Allowed Callback URLs: e.g., http://localhost:3000
+* Allowed Logout URLs: e.g., http://localhost:3000
+* Allowed Web Origins: e.g., http://localhost:3000
