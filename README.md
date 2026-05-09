@@ -26,6 +26,12 @@ cd client # go to client dir
 pnpm test # run test (vitest)
 ```
 
+![local vitest](images/test-local.png)
+
+A screenshot of the passing GitHub Actions pipeline
+
+- ...
+
 ## Authentication
 
 - I using Auth0. But I think FireBase is easyer to setup.
