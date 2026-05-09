@@ -1,6 +1,6 @@
 # Gym API modul 3
 
-## clone this repo and run the project:
+## clone this repo and run the project
 
 ```bash
 git clone https://github.com/eklownr/gymAPI.git
@@ -18,3 +18,14 @@ pnpm dev # run vite frontend server
 ## setup your .env
 
 se .env.example
+
+## Testing
+
+```bash
+cd client # go to client dir
+pnpm test # run test (vitest)
+```
+
+## Authentication
+
+- I using Auth0. But I think FireBase is easyer to setup.
