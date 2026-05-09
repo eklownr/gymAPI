@@ -1,10 +1,24 @@
 GET http://localhost:3000/
 
-### 
-GET http://localhost:3000/users
+### Profile info on logedin user
+GET http://localhost:3000/profile
+
+###
+GET http://localhost:5173/profile
 
 ###
 GET http://localhost:3000/gyms
+
+###
+POST http://localhost:5173/gyms
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "IronGym",
+    "location": "Solna"
+}   
+
 
 ###
 GET http://localhost:3000/gyms/3

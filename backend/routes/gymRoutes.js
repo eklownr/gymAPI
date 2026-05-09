@@ -1,4 +1,3 @@
-// routes/gymRoutes.js
 import { Router } from "express";
 import { gyms } from "../data.js";
 

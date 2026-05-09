@@ -1,10 +1,9 @@
-// backend/index.js
 import express from "express";
 import { authMiddleware } from "./middleware/auth.js";
 import pkg from "express-openid-connect";
 import cors from "cors";
-// import { gyms } from "./data.js";
 import gymRoutes from "./routes/gymRoutes.js";
+import { gyms } from "./data.js";
 
 const { requiresAuth } = pkg;
 const app = express();
@@ -27,28 +26,17 @@ app.get("/", (req, res) => {
 	return res.oidc.login({ returnTo: "http://localhost:5173/profile" });
 });
 
-// List all Gyms
-//app.get("/gyms", (req, res) => {
-//	return res.json({ gyms });
-//});
-
-/* Get single gym
-app.get("/gyms/:id", (req, res) => {
-	const gym = gyms.find((g) => g.id == req.params.id);
-	gym ? res.json(gym) : res.status(404).json({ error: "Gym not found" });
-});
-*/
-
-// app.get('/', (req, res) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
-
+// protected routes
 app.get("/profile", requiresAuth(), (req, res) => {
 	try {
 		res.json(req.oidc.user);
 	} catch (error) {
 		console.log(error);
 	}
+});
+
+app.post("/gyms", requiresAuth(), (req, res) => {
+	res.status(201).json({ message: "Gym created" });
 });
 
 // Protected route
