@@ -14,9 +14,9 @@ POST http://localhost:5173/gyms
 Content-Type: application/json
 
 {
-    "id": 4,
     "name": "IronGym",
-    "location": "Solna"
+    "location": "Solna",
+    "reviews": "Big and fansy"
 }   
 
 
