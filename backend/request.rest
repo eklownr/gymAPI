@@ -1,16 +1,22 @@
+
+###
 GET http://localhost:3000/
+
 
 ### Profile info on logedin user
 GET http://localhost:3000/profile
 
+
 ###
 GET http://localhost:5173/profile
+
 
 ###
 GET http://localhost:3000/gyms
 
+
 ###
-POST http://localhost:5173/gyms
+POST http://localhost:3000/gyms
 Content-Type: application/json
 
 {
@@ -22,21 +28,3 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/gyms/3
-
-###
-POST http://localhost:3000/users
-Content-Type: application/json
-
-{
-    "name": "Kalle",
-    "password": "password"
-}   
-
-###
-POST http://localhost:3000/users/login
-Content-Type: application/json
-
-{
-    "name": "Kalle",
-    "password": "password"
-}   
