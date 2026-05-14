@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 import AddGym from "./components/AddGym/AddGym";
+import AddReview from "./components/AddReview/AddReview";
 
 const router = createBrowserRouter([
 	{
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				path: "addGym",
 				element: <AddGym />,
+			},
+			{
+				path: "addReview/:id",
+				element: <AddReview />,
 			},
 		],
 	},
