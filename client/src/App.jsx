@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext"; // Importera AuthProvider
 import Main from "./Layout/Main";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -35,8 +36,18 @@ const router = createBrowserRouter([
 	},
 ]);
 
+//const App = () => {
+//	return <RouterProvider router={router} />;
+//};
+
 const App = () => {
-	return <RouterProvider router={router} />;
+	return (
+		<AuthProvider>
+			{" "}
+			{/* Omsluta med AuthProvider */}
+			<RouterProvider router={router} />
+		</AuthProvider>
+	);
 };
 
 export default App;
