@@ -37,7 +37,6 @@ const Profile = () => {
 			)}
 			<p>{user.email}</p>
 			<p>{user.name}</p>
-			<a href="http://localhost:3000/logout">Logout</a>
 			<a href="http://localhost:5173/addGym">Add New Gym</a>
 		</div>
 	);
