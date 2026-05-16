@@ -45,3 +45,15 @@ A screenshot of the passing GitHub Actions pipeline
 * Allowed Callback URLs: e.g., http://localhost:3000
 * Allowed Logout URLs: e.g., http://localhost:3000
 * Allowed Web Origins: e.g., http://localhost:3000
+
+## Security decisions
+
+- CORS: By specifying a specific origin instead of \*, you are telling the browser: "Only allow requests from this exact domain to read my API's response." A request from evil-site.com will be blocked by the browser's security policy, even if the cookie is sent with
+
+- localStorage is easily accessible to all JavaScript running on the page. If an attacker manages to inject malicious code (e.g. via a vulnerable JavaScript library or user input), they can easily steal the token using localStorage.getItem('token')
+
+## Reflections
+
+- I wish I had more time to understand frontend React.
+- I wish I had more time to add a DB connection instead of an local object with mock data
+- The hardest thing I found was to get the flow between front- and back-end
