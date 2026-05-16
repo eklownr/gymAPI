@@ -1,10 +1,10 @@
-// backend/data.js
+// backend/data.js - Mock data
 export const gyms = [
 	{
 		id: 1,
 		name: "Power Gym",
 		location: "Stockholm",
-		reviews: ["Experience but nice gym"],
+		reviews: ["Expensive gym but Nice gym"],
 	},
 	{
 		id: 2,

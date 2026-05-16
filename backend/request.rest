@@ -7,7 +7,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/profile
 
 
-###
+### View profile from frontend
 GET http://localhost:5173/profile
 
 

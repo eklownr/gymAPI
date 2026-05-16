@@ -23,6 +23,7 @@ app.use(gymRoutes);
 
 // Home route - public
 app.get("/", (req, res) => {
+	// when logged in, redirect to profile
 	return res.oidc.login({ returnTo: "http://localhost:5173/profile" });
 });
 
@@ -43,7 +44,7 @@ app.get("/profile", requiresAuth(), (req, res) => {
 app.post("/gyms", requiresAuth(), (req, res) => {
 	const { name, location, reviews } = req.body;
 
-	// Enkel validering
+	// Enkel validering - checka att namn och ort finns
 	if (!name || !location) {
 		return res.status(400).json({ error: "Namn och ort krävs" });
 	}

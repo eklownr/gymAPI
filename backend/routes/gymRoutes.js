@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { gyms } from "../data.js";
+import { gyms } from "../data.js"; // Istället för Database
 
 const router = Router();
 
