@@ -38,6 +38,7 @@ const Profile = () => {
 			<p>{user.email}</p>
 			<p>{user.name}</p>
 			<a href="http://localhost:5173/addGym">Add New Gym</a>
+			<a href="http://localhost:5173/addReview/1">Add review to Gym</a>
 		</div>
 	);
 };
