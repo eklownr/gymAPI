@@ -11,12 +11,36 @@ const app = express();
 app.use(authMiddleware);
 
 app.use(express.json());
+
+const render_url = "https://gymapi-frontend.onrender.com"
+
+const allowedOrigins = process.env.NODE_ENV === 'production'
+  ? [process.env.BASE_URL, 'https://gymapi-frontend.onrender.com'] // Lägg till din frontend-URL här
+  : ['http://localhost:5173', 'http://localhost:3000'];
+
 app.use(
-	cors({
-		origin: "http://localhost:5173",
-		credentials: true,
-	}),
-);
+  cors({
+    origin: function (origin, callback) {
+      // Tillåt requests utan origin (t.ex. mobilappar eller curl)
+      if (!origin) return callback(null, true);
+      
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Inte tillåten av CORS'));
+      }
+    },
+    credentials: true,
+  })
+);   
+
+
+//app.use(
+//	cors({
+//		origin: "http://localhost:5173",
+//		credentials: true,
+//	}),
+//);
 
 //  Lägger till public routes
 app.use(gymRoutes);
@@ -24,7 +48,7 @@ app.use(gymRoutes);
 // Home route - public
 app.get("/", (req, res) => {
 	// when logged in, redirect to profile
-	return res.oidc.login({ returnTo: "http://localhost:5173/profile" });
+	return res.oidc.login({ returnTo: render_url + "/profile" });
 });
 
 /**
