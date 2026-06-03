@@ -13,7 +13,7 @@ const AddGym = () => {
 
 		try {
 			await axios.post(
-				"https://gymapi-frontend.onrender.com/gyms",
+				"https://gymapi-backend.onrender.com/gyms",
 				{
 					name,
 					location,

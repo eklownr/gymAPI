@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
-const apiBaseUrl = "https://gymapi-frontend.onrender.com"
 
 const Header = () => {
 	const { user, loading } = useAuth();
@@ -13,7 +12,7 @@ const Header = () => {
 		<div>
 			<Link to="/">Home</Link>
 			{user ? (
-				<a href="https://gymapi-frontend.onrender.com/logout">Logout</a>
+				<a href="https://gymapi-backend.onrender.com/logout">Logout</a>
 			) : (
 				<Link to="/login">Login</Link>
 			)}

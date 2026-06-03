@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
 	useEffect(() => {
 		const checkUser = async () => {
 			try {
-				const res = await axios.get("http://localhost:3000/profile", {
+				const res = await axios.get("https://gymapi-backend.onrender.com/profile", {
 					withCredentials: true,
 				});
 				setUser(res.data);
