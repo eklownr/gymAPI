@@ -12,7 +12,7 @@ const AddComment = () => {
 		setLoading(true);
 		try {
 			await axios.post(
-				"http://localhost:3000/comments",
+				"https://gymapi-frontend.onrender.com/comments",
 				{ text: comment },
 				{ withCredentials: true },
 			);

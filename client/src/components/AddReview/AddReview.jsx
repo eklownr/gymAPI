@@ -13,7 +13,7 @@ const AddReview = () => {
 		setLoading(true);
 		try {
 			const response = await axios.put(
-				`http://localhost:3000/gyms/${gymId}/reviews`,
+				`https://gymapi-frontend.onrender.com/gyms/${gymId}/reviews`,
 				{ review },
 				{ withCredentials: true },
 			);
