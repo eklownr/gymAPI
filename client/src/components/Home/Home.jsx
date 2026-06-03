@@ -2,6 +2,7 @@ const Home = () => {
 	return (
 		<div>
 			<h2>Home GymAPI - Module3 Auth0 with express</h2>
+			<a href="https://gymapi-frontend.onrender.com/profile"> Dashboard </a>
 			<a href="https://gymapi-backend.onrender.com/profile"> Profile </a>
 			<a href="https://gymapi-backend.onrender.com/gyms"> List all gyms </a>
 			<a href="https://gymapi-backend.onrender.com/gyms/1"> Gym nr 1 </a>
