@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:3000";
+
+
 const Profile = () => {
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -9,7 +12,7 @@ const Profile = () => {
 		const fetchProfile = async () => {
 			try {
 				const response = await axios.get(
-					"http://localhost:3000/profile",
+					`${apiBaseUrl}/profile`,
 					{
 						withCredentials: true,
 					},
