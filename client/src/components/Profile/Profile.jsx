@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? "https://gymapi-backend.onrender.com";
-
+const frontendUrl = "https://gymapi-frontend.onrender.com"
+const backendUrl = "https://gymapi-backend.onrender.com"
 
 const Profile = () => {
 	const [user, setUser] = useState(null);
@@ -12,7 +13,7 @@ const Profile = () => {
 		const fetchProfile = async () => {
 			try {
 				const response = await axios.get(
-					`${apiBaseUrl}/profile`,
+					`${backendUrl}/profile`,
 					{
 						withCredentials: true,
 					},
@@ -40,8 +41,8 @@ const Profile = () => {
 			)}
 			<p>{user.email}</p>
 			<p>{user.name}</p>
-			<a href="http://localhost:5173/addGym">Add New Gym</a>
-			<a href="http://localhost:5173/addReview/1">Add review to Gym</a>
+			<a href="https://gymapi-frontend.onrender.com/addGym">Add New Gym</a>
+			<a href="https://gymapi-frontend.onrender.com/addReview/1">Add review to Gym</a>
 		</div>
 	);
 };
